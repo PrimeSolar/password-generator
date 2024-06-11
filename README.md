@@ -16,6 +16,6 @@ At just 16 characters, random strings are extremely secure.
 
 It is much harder for a computer to guess them, and would likely take centuries.
 
-Users' online world revolves around logins and passwords. To stay safe from data breaches, you need to create strong and unique passwords for every account
+Users' online world revolves around logins and passwords. To stay safe from data breaches, you need to create strong and unique passwords for every account.
 
 The Password Generator is a tool designed to help you. The generated passwords meet high security standards and can be customized to suit individual needs. With the Password Generator, you can easily create unique and strong passwords to enhance your online security.
