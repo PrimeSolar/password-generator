@@ -10,16 +10,31 @@
     content="The Password Generator is a tool designed to create secure and random passwords for users. The generated passwords meet high security standards and can be customized to suit individual needs. With the Password Generator, you can easily create strong and unique passwords to enhance your online security." />
   <link rel="stylesheet" type="text/css" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
   <link rel="stylesheet" type="text/css" href="styles/style.css" title="Main Stylesheet" />
+  <link rel="stylesheet" type="text/css" href="styles/media-queries.css" />
 </head>
 
 <body>
+
   <div class="flex-container">
+
     <h1>Password Generator</h1>
-    <span>Password Length: </span><input type="number" id="length" name="number" value="16" />
-    <a id="button">Generate and Copy</a>
+
+    <div>
+      <span>Password Length: </span><input type="number" id="length" name="number" value="16" />
+    </div>
+    <label class="checkbox-container">Include Lowercase: </span><input type="checkbox" id="includeLowerCase" checked="checked" /><span class="checkmark"></span></label>
+    <label class="checkbox-container">Include Uppercase: <input type="checkbox" id="includeUpperCase" checked="checked" /><span class="checkmark"></span></label>
+    <label class="checkbox-container">Include Numbers: <input type="checkbox" id="includeNumbers" checked="checked" /><span class="checkmark"></span></label>
+    <label class="checkbox-container">Include Symbols: <input type="checkbox" id="includeSymbols" checked="checked" /><span class="checkmark"></span></label>
+
+    <a class="button" id="generate-and-copy-button"></a>
+
     <p id="password"></p>
+
   </div>
-  <script src="scripts/generate-and-copy.js"></script>
+
+  <script type="text/javascript" src="scripts/generate-and-copy.js"></script>
+  <script type="text/javascript" src="scripts/ripples.js"></script>
 </body>
 
 </html>
