@@ -12,7 +12,7 @@ body {
   padding: 0;
   margin: 0;
   text-align: center;
-  font-family: sans-serif;
+  font-family: Arial;
   font-size: 5vh;
   display: flex;
   justify-content: center;
@@ -27,18 +27,19 @@ body {
   flex-direction: column;
   width: 70vw;
   height: 95vh;
+  gap: 2.7vh;
   justify-content: flex-start;
   align-items: center;
   background: #f7f7f7;
   border-radius: 20px;
-  color: rgb(45, 110, 178);
+  color: rgb(45, 110, 205);
   font-weight: bold;
   word-wrap: break-word;
   overflow: auto;
 }
 
 .flex-container * {
-  margin: 2vh 0;
+  margin: 0;
   justify-content: center;
   word-wrap: break-word;
 }
@@ -46,9 +47,92 @@ body {
 h1 {
   max-width: 70vw;
   padding-top: 5vh;
+  font-size: 5vh;
 }
 
-a {
+span {
+  font-size: 2.5vh;
+}
+
+input {
+  border: solid 1px #2196F4;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-left: 3.7px !important;
+}
+
+input:focus {
+  box-shadow: none;
+}
+
+/* A checkbox container */
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-right: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 2.5vh;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 25px;
+  width: 25px;
+  border-radius: 5px;
+  background-color: #eee;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.checkmark:active {
+  box-shadow: none;
+  transition: 1s;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked~.checkmark {
+  background-color: #2196F4;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Show the checkmark when checked */
+input:checked~.checkmark:after {
+  display: block;
+}
+
+a.button {
   position: relative;
   display: inline-block;
   padding: 2vh 2vh;
@@ -59,8 +143,42 @@ a {
   font-size: 1.7vh;
   letter-spacing: 0.2vh;
   border-radius: 37px;
-  background: linear-gradient(90deg, #0162c8, #50b0f0);
+  background: linear-gradient(90deg, #0162df, #50b0f0);
+  overflow: hidden;
   cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+a.button::before {
+  content: "Generate and Copy";
+}
+
+a.button:active {
+  box-shadow: none;
+  transition: 1s;
+}
+
+#ripples {
+  position: absolute;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0.5;
+  }
+
+  100% {
+    width: 1000px;
+    height: 1000px;
+    opacity: 0;
+  }
 }
 
 #button {
@@ -75,10 +193,10 @@ a {
 #password {
   position: fixed;
   width: 70vw;
-  height: 35.5vh;
+  height: 30vh;
   padding: 1vh 0;
   margin: 0 1vw;
-  top: 60vh;
+  bottom: 2.25vh;
   border-radius: 0 0 20px 20px;
   font-size: 3.7vh;
   word-wrap: break-word;
