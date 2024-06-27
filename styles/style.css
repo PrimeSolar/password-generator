@@ -9,6 +9,8 @@ html {
 }
 
 body {
+  flex-direction: column;
+  justify-content: flex-start;
   padding: 0;
   margin: 0;
   text-align: center;
@@ -26,7 +28,8 @@ body {
   display: flex;
   flex-direction: column;
   width: 70vw;
-  height: 95vh;
+  height: 98.7vh;
+  margin: 0;
   gap: 2.7vh;
   justify-content: flex-start;
   align-items: center;
@@ -136,7 +139,7 @@ a.button {
   position: relative;
   display: inline-block;
   padding: 2vh 2vh;
-  margin: 10px 0;
+  margin: -10px 0;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
@@ -194,7 +197,7 @@ a.button:active {
   position: fixed;
   width: 70vw;
   height: 30vh;
-  padding: 1vh 0;
+  padding: 1vh 0 5.5vh;
   margin: 0 1vw;
   bottom: 2.25vh;
   border-radius: 0 0 20px 20px;
@@ -221,18 +224,80 @@ input {
   font-size: 2.5vh;
 }
 
-@media screen and (max-width: 742px) {
-  h1 {
-    font-size: 7vh;
-  }
+#footerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 93vh;
+  width: 70vw;
+  height: 4.5vh;
+  padding: 1vh 0;
+  font-size: 2.5vh;
+  border-top: solid 1px #f2f2f2;
+  border-radius: 0 0 20px 20px;
+  background: linear-gradient(90deg, #0162c8, #50b0f0);
+  color: #f2f2f2;
 }
 
-@media screen and (max-width: 500px) {
-  h1 {
-    font-size: 5vh;
-  }
+#footerContainer a {
+  text-decoration: underline;
+}
 
-  span {
-    font-size: 2.5vh;
-  }
+#footerContainer a:visited {
+  color: #f2f2f2;
+}
+
+/* noscript */
+
+noscript #enable-javascript {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: 70vw;
+  margin: 10vh 5vw 1vh;
+  padding: 0 2vw 2vh;
+  font-size: 16px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+
+noscript h1 {
+  display: none;
+}
+
+noscript main {
+  display: none;
+}
+
+noscript h2 {
+  padding: 1vh 0 0;
+}
+
+noscript p {
+  width: 50vw;
+  margin: 1vh 0;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #2f2f2f;
+}
+
+noscript details {
+  width: 50vw;
+  margin: 1vh 0;
+  text-align: left;
+}
+
+noscript details summary {
+  text-align: left;
+  cursor: pointer;
+}
+
+noscript li {
+  margin: 2vh 0;
+  font-size: 16px;
+  line-height: 1.5em;
 }
