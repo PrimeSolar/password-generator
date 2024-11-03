@@ -1,5 +1,3 @@
-// Reusable Elements
-
 // Footer
 footerContainer = document.querySelector("#footerContainer");
 
