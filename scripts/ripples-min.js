@@ -1,0 +1,1 @@
+const button=document.getElementsByClassName("button");for(let t of button)t.addEventListener("click",(function(t){let e=t.clientX-t.target.offsetLeft,n=t.clientY-t.target.offsetTop,o=document.createElement("span");o.setAttribute("id","ripples"),o.style.left=e+"px",o.style.top=n+"px",this.appendChild(o),setTimeout((()=>{o.remove()}),1e3)}));
