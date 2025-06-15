@@ -35,7 +35,7 @@ body {
   align-items: center;
   background: #f7f7f7;
   border-radius: 20px;
-  color: rgb(45, 110, 205);
+  color: #2d6ecd;
   font-weight: bold;
   word-wrap: break-word;
   overflow: auto;
@@ -72,9 +72,9 @@ span {
 }
 
 input {
-  border: solid 1px #2196F4;
+  border: solid 1px #2196f4;
   border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 #00000037, 0 6px 20px 0 #00000030;
   margin-left: 3.7px !important;
 }
 
@@ -109,8 +109,8 @@ input:focus {
   height: 25px;
   width: 25px;
   border-radius: 5px;
-  background-color: #eee;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #eeeeee;
+  box-shadow: 0 4px 8px 0 #00000037, 0 6px 20px 0 #00000030;
 }
 
 .checkmark:active {
@@ -119,13 +119,13 @@ input:focus {
 }
 
 /* On mouse-over, add a grey background color */
-.checkbox-container:hover input~.checkmark {
-  background-color: #ccc;
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #cccccc;
 }
 
 /* When the checkbox is checked, add a blue background */
-.checkbox-container input:checked~.checkmark {
-  background-color: #2196F4;
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #2196f4;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -137,7 +137,7 @@ input:focus {
   top: 5px;
   width: 5px;
   height: 10px;
-  border: solid white;
+  border: solid #ffffff;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -145,7 +145,7 @@ input:focus {
 }
 
 /* Show the checkmark when checked */
-input:checked~.checkmark:after {
+input:checked ~ .checkmark:after {
   display: block;
 }
 
@@ -154,7 +154,7 @@ a.button {
   display: inline-block;
   padding: 2vh 2vh;
   margin: -10px 0;
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.7vh;
@@ -163,7 +163,7 @@ a.button {
   background: linear-gradient(90deg, #0162df, #50b0f0);
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 #00000037, 0 6px 20px 0 #00000030;
 }
 
 a.button::before {
@@ -177,7 +177,7 @@ a.button:active {
 
 #ripples {
   position: absolute;
-  background: #fff;
+  background: #ffffff;
   transform: translate(-50%, -50%);
   pointer-events: none;
   border-radius: 50%;
@@ -219,7 +219,7 @@ a.button:active {
   word-wrap: break-word;
   overflow: auto;
   background: linear-gradient(90deg, #0162c8, #50b0f0);
-  color: #fff;
+  color: #ffffff;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -229,7 +229,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield; /* For older versions of Firefox */
   appearance: textfield;
 }
