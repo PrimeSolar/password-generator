@@ -1,5 +1,7 @@
 // Generate a Password and Copy It to the Clipboard
-const generateAndCopyButton = document.getElementById("generate-and-copy-button");
+const generateAndCopyButton = document.getElementById(
+  "generate-and-copy-button"
+);
 const password = document.getElementById("password");
 const length = document.getElementById("length");
 const includeLowerCase = document.getElementById("includeLowerCase");
@@ -7,7 +9,13 @@ const includeUpperCase = document.getElementById("includeUpperCase");
 const includeNumbers = document.getElementById("includeNumbers");
 const includeSymbols = document.getElementById("includeSymbols");
 
-const generatePassword = (length, includeLowerCaseChecked, includeUpperCaseChecked, includeNumbersChecked, includeSymbolsChecked) => {
+const generatePassword = (
+  length,
+  includeLowerCaseChecked,
+  includeUpperCaseChecked,
+  includeNumbersChecked,
+  includeSymbolsChecked
+) => {
   const lowerCaseChars = "abcdefghijklmnopqrstuvwxtz";
   const lowerUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const numberChars = "0123456789";
@@ -36,9 +44,10 @@ const generatePassword = (length, includeLowerCaseChecked, includeUpperCaseCheck
 
   console.log(password);
   return password;
-}
+};
 
-const generate = (length) => [...Array(length)].map(() => Math.random().toString(36)[2]).join('');
+const generate = (length) =>
+  [...Array(length)].map(() => Math.random().toString(36)[2]).join("");
 
 function copy() {
   const lengthValue = parseInt(length.value);
@@ -46,19 +55,25 @@ function copy() {
   const includeUpperCaseChecked = includeUpperCase.checked;
   const includeNumbersChecked = includeNumbers.checked;
   const includeSymbolsChecked = includeSymbols.checked;
-  password.innerHTML = generatePassword(lengthValue, includeLowerCaseChecked, includeUpperCaseChecked, includeNumbersChecked, includeSymbolsChecked);
-  let inp = document.createElement('input');
+  password.innerHTML = generatePassword(
+    lengthValue,
+    includeLowerCaseChecked,
+    includeUpperCaseChecked,
+    includeNumbersChecked,
+    includeSymbolsChecked
+  );
+  let inp = document.createElement("input");
   document.body.appendChild(inp);
   inp.value = password.innerHTML;
   inp.select();
-  document.execCommand('copy', false);
+  document.execCommand("copy", false);
   inp.remove();
   length.value = Math.trunc(length.value);
 }
 
-window.addEventListener('keypress', function(event) {
-  if (event.key === "Enter") copy()
+window.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") copy();
 });
-generateAndCopyButton.addEventListener('click', function() {
-  if (true) copy()
+generateAndCopyButton.addEventListener("click", function () {
+  if (true) copy();
 });
