@@ -1,4 +1,4 @@
-@media screen and (max-width: 1920px) {
+@media (max-width: 1920px) {
   h1 {
     font-size: 30px;
   }
@@ -25,8 +25,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
-
+@media (max-width: 500px) {
   /* A checkbox container */
   .flex-container {
     width: 90vw;
