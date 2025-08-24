@@ -1,6 +1,6 @@
 const button = document.getElementsByClassName("button");
 for (let btn of button) {
-  btn.addEventListener("click", function(e) {
+  btn.addEventListener("click", function (e) {
     let x = e.clientX - e.target.offsetLeft;
     let y = e.clientY - e.target.offsetTop;
     let ripples = document.createElement("span");
@@ -10,7 +10,7 @@ for (let btn of button) {
     this.appendChild(ripples);
 
     setTimeout(() => {
-      ripples.remove()
-    }, 1000)
-  })
+      ripples.remove();
+    }, 1000);
+  });
 }
