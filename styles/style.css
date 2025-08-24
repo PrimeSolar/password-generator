@@ -74,11 +74,13 @@ span {
 input {
   border: solid 1px #2196f4;
   border-radius: 5px;
+  -webkit-box-shadow: 0 4px 8px 0 #00000037, 0 6px 20px 0 #00000030;
   box-shadow: 0 4px 8px 0 #00000037, 0 6px 20px 0 #00000030;
   margin-left: 3.7px !important;
 }
 
 input:focus {
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -110,10 +112,12 @@ input:focus {
   width: 25px;
   border-radius: 5px;
   background-color: #eeeeee;
+  -webkit-box-shadow: 0 4px 8px 0 #00000037, 0 6px 20px 0 #00000030;
   box-shadow: 0 4px 8px 0 #00000037, 0 6px 20px 0 #00000030;
 }
 
 .checkmark:active {
+  -webkit-box-shadow: none;
   box-shadow: none;
   transition: 1s;
 }
@@ -163,6 +167,7 @@ a.button {
   background: linear-gradient(90deg, #0162df, #50b0f0);
   overflow: hidden;
   cursor: pointer;
+  -webkit-box-shadow: 0 4px 8px 0 #00000037, 0 6px 20px 0 #00000030;
   box-shadow: 0 4px 8px 0 #00000037, 0 6px 20px 0 #00000030;
 }
 
@@ -171,6 +176,7 @@ a.button::before {
 }
 
 a.button:active {
+  -webkit-box-shadow: none;
   box-shadow: none;
   transition: 1s;
 }
