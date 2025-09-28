@@ -1,0 +1,1 @@
+const footerContainer=document.querySelector("#footerContainer");function footerContainerF(e){null!=e&&(e.innerHTML+=`\n<footer>\nCopyright © <a href="https://primesolar.github.io/web-developer/">Vladislav Kazantsev</a> ${(new Date).getFullYear()}\n</footer>\n      `)}footerContainerF(footerContainer);
