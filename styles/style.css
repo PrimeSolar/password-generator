@@ -14,7 +14,7 @@
  */
 
  html {
-  height: 100%;
+  height: 100%; /* Set the height for the element. */
   scroll-behavior: smooth;
   background-image: url(../assets/background.jpg);
   background-repeat: no-repeat;
@@ -24,40 +24,39 @@
 }
 
 body {
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 0;
-  margin: 0;
+  padding: 0; /* Set the padding for the element. */
+  margin: 0; /* Set the margin for the element. */
   text-align: center;
-  font-family: Arial;
-  font-size: 5vh;
-  display: flex;
-  justify-content: center;
+  font-family: Arial; /* Set the font family for the text of the element. */
+  font-size: 5vh; /* Set the font size for the text of the element. */
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  width: 100vw; /* Set the width for the element. */
+  height: 100vh; /* Set the height for the element. */
   word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .flex-container {
   display: flex;
   flex-direction: column;
-  width: 70vw;
-  height: 98.7vh;
-  margin: 0;
+  width: 70vw; /* Set the width for the element. */
+  height: 98.7vh; /* Set the height for the element. */
+  margin: 0; /* Set the margin for the element. */
   gap: 2.7vh;
   justify-content: flex-start;
   align-items: center;
   background: #f7f7f7;
   border-radius: 20px;
-  color: #2d6ecd;
+  color: #2d6ecd; /* Set the color for the text of the element. */
   font-weight: bold;
   word-wrap: break-word;
   overflow: auto;
 }
 
 .flex-container * {
-  margin: 0;
+  margin: 0; /* Set the margin for the element. */
   justify-content: center;
   word-wrap: break-word;
 }
@@ -65,7 +64,7 @@ body {
 h1 {
   max-width: 70vw;
   padding-top: 5vh;
-  font-size: 5vh;
+  font-size: 5vh; /* Set the font size for the text of the element. */
   animation: brighten 1s;
 }
 
@@ -79,11 +78,11 @@ h1 {
 }
 
 .link {
-  font-size: 15px;
+  font-size: 15px; /* Set the font size for the text of the element. */
 }
 
 span {
-  font-size: 2.5vh;
+  font-size: 2.5vh; /* Set the font size for the text of the element. */
 }
 
 input {
@@ -99,32 +98,32 @@ input:focus {
   box-shadow: none;
 }
 
-/* A checkbox container */
+/* A checkbox container. */
 .checkbox-container {
   display: block;
   position: relative;
   padding-right: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 2.5vh;
+  font-size: 2.5vh; /* Set the font size for the text of the element. */
 }
 
-/* Hide the browser's default checkbox */
+/* Hide the browser's default checkbox. */
 .checkbox-container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
-  height: 0;
-  width: 0;
+  height: 0; /* Set the height for the element. */
+  width: 0; /* Set the width for the element. */
 }
 
-/* Create a custom checkbox */
+/* Create a custom checkbox. */
 .checkmark {
   position: absolute;
   top: 0;
   right: 0;
-  height: 25px;
-  width: 25px;
+  height: 25px; /* Set the height for the element. */
+  width: 25px; /* Set the width for the element. */
   border-radius: 5px;
   background-color: #eeeeee;
   -webkit-box-shadow: 0 4px 8px 0 #00000037, 0 6px 20px 0 #00000030;
@@ -137,25 +136,25 @@ input:focus {
   transition: 1s;
 }
 
-/* On mouse-over, add a grey background color */
+/* On mouse-over, add a grey background color. */
 .checkbox-container:hover input ~ .checkmark {
   background-color: #cccccc;
 }
 
-/* When the checkbox is checked, add a blue background */
+/* When the checkbox is checked, add a blue background. */
 .checkbox-container input:checked ~ .checkmark {
   background-color: #2196f4;
 }
 
-/* Create the checkmark/indicator (hidden when not checked) */
+/* Create the checkmark/indicator (hidden when not checked). */
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
   left: 9px;
   top: 5px;
-  width: 5px;
-  height: 10px;
+  width: 5px; /* Set the width for the element. */
+  height: 10px; /* Set the height for the element. */
   border: solid #ffffff;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
@@ -163,7 +162,7 @@ input:focus {
   transform: rotate(45deg);
 }
 
-/* Show the checkmark when checked */
+/* Show the checkmark when checked. */
 input:checked ~ .checkmark:after {
   display: block;
 }
@@ -171,12 +170,12 @@ input:checked ~ .checkmark:after {
 a.button {
   position: relative;
   display: inline-block;
-  padding: 2vh 2vh;
-  margin: -10px 0;
-  color: #ffffff;
+  padding: 2vh 2vh; /* Set the padding for the element. */
+  margin: -10px 0; /* Set the margin for the element. */
+  color: #ffffff; /* Set the color for the text of the element. */
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1.7vh;
+  font-size: 1.7vh; /* Set the font size for the text of the element. */
   letter-spacing: 0.2vh;
   border-radius: 37px;
   background: linear-gradient(90deg, #0162df, #50b0f0);
@@ -207,14 +206,14 @@ a.button:active {
 
 @keyframes animate {
   0% {
-    width: 0px;
-    height: 0px;
+    width: 0px; /* Set the width for the element. */
+    height: 0px; /* Set the height for the element. */
     opacity: 0.5;
   }
 
   100% {
-    width: 1000px;
-    height: 1000px;
+    width: 1000px; /* Set the width for the element. */
+    height: 1000px; /* Set the height for the element. */
     opacity: 0;
   }
 }
@@ -224,39 +223,39 @@ a.button:active {
 }
 
 #length {
-  width: 7vw;
+  width: 7vw; /* Set the width for the element. */
   text-align: center;
 }
 
 #password {
   position: fixed;
-  width: 70vw;
-  height: 30vh;
-  padding: 1vh 0 5.5vh;
-  margin: 0 1vw;
+  width: 70vw; /* Set the width for the element. */
+  height: 30vh; /* Set the height for the element. */
+  padding: 1vh 0 5.5vh; /* Set the padding for the element. */
+  margin: 0 1vw; /* Set the margin for the element. */
   bottom: 2.25vh;
   border-radius: 0 0 20px 20px;
-  font-size: 3.7vh;
+  font-size: 3.7vh; /* Set the font size for the text of the element. */
   word-wrap: break-word;
   overflow: auto;
   background: linear-gradient(90deg, #0162c8, #50b0f0);
-  color: #ffffff;
+  color: #ffffff; /* Set the color for the text of the element. */
 }
 
-/* Chrome, Safari, Edge, Opera */
+/* Chrome, Safari, Edge, Opera. */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-  margin: 0;
+  margin: 0; /* Set the margin for the element. */
 }
 
 input[type="number"] {
-  -moz-appearance: textfield; /* For older versions of Firefox */
+  -moz-appearance: textfield; /* For older versions of Firefox. */
   appearance: textfield;
 }
 
 input {
-  font-size: 2.5vh;
+  font-size: 2.5vh; /* Set the font size for the text of the element. */
 }
 
 #footerContainer {
@@ -265,14 +264,14 @@ input {
   align-items: center;
   position: fixed;
   top: 93vh;
-  width: 70vw;
-  height: 4.5vh;
-  padding: 1vh 0;
-  font-size: 2.5vh;
+  width: 70vw; /* Set the width for the element. */
+  height: 4.5vh; /* Set the height for the element. */
+  padding: 1vh 0; /* Set the padding for the element. */
+  font-size: 2.5vh; /* Set the font size for the text of the element. */
   border-top: solid 1px #f2f2f2;
   border-radius: 0 0 20px 20px;
   background: linear-gradient(90deg, #0162c8, #50b0f0);
-  color: #f2f2f2;
+  color: #f2f2f2; /* Set the color for the text of the element. */
 }
 
 #footerContainer a {
@@ -280,22 +279,22 @@ input {
 }
 
 #footerContainer a:visited {
-  color: #f2f2f2;
+  color: #f2f2f2; /* Set the color for the text of the element. */
 }
 
-/* noscript */
+/* noscript. */
 
 noscript #enable-javascript {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: fit-content;
-  width: 70vw;
-  margin: 10vh 5vw 1vh;
-  padding: 0 2vw 2vh;
-  font-size: 16px;
-  background-color: #f2f2f2;
+  height: fit-content; /* Set the height for the element. */
+  width: 70vw; /* Set the width for the element. */
+  margin: 10vh 5vw 1vh; /* Set the margin for the element. */
+  padding: 0 2vw 2vh; /* Set the padding for the element. */
+  font-size: 16px; /* Set the font size for the text of the element. */
+  background-color: #f2f2f2; /* Set the color for the text of the element. */
   border-radius: 10px;
 }
 
@@ -308,21 +307,21 @@ noscript main {
 }
 
 noscript h2 {
-  padding: 1vh 0 0;
+  padding: 1vh 0 0; /* Set the padding for the element. */
 }
 
 noscript p {
-  width: 50vw;
-  margin: 1vh 0;
+  width: 50vw; /* Set the width for the element. */
+  margin: 1vh 0; /* Set the margin for the element. */
   text-align: left;
-  font-size: 16px;
+  font-size: 16px; /* Set the font size for the text of the element. */
   line-height: 1.5em;
-  color: #2f2f2f;
+  color: #2f2f2f; /* Set the color for the text of the element. */
 }
 
 noscript details {
-  width: 50vw;
-  margin: 1vh 0;
+  width: 50vw; /* Set the width for the element. */
+  margin: 1vh 0; /* Set the margin for the element. */
   text-align: left;
 }
 
@@ -332,7 +331,7 @@ noscript details summary {
 }
 
 noscript li {
-  margin: 2vh 0;
-  font-size: 16px;
+  margin: 2vh 0; /* Set the margin for the element. */
+  font-size: 16px; /* Set the font size for the text of the element. */
   line-height: 1.5em;
 }
