@@ -18,30 +18,30 @@
     font-size: 30px;
   }
 
-  /* A checkbox container */
+  /* A checkbox container. */
   .checkbox-container {
     padding-right: 25px;
     margin-bottom: 12px;
     font-size: 2.5vh;
   }
 
-  /* A custom checkbox */
+  /* A custom checkbox. */
   .checkmark {
-    height: 19px;
+    height: 19px; /* Set the height for the element. */
     width: 19px;
   }
 
-  /* The checkmark/indicator (hidden when not checked) */
+  /* The checkmark/indicator (hidden when not checked). */
   .checkmark:after {
     left: 6px;
     top: 2px;
     width: 4px;
-    height: 10px;
+    height: 10px; /* Set the height for the element. */
   }
 }
 
 @media (max-width: 500px) {
-  /* A checkbox container */
+  /* A checkbox container. */
   .flex-container {
     width: 90vw;
   }
@@ -60,18 +60,18 @@
     font-size: 2.5vh;
   }
 
-  /* A custom checkbox */
+  /* A custom checkbox. */
   .checkmark {
-    height: 25px;
+    height: 25px; /* Set the height for the element. */
     width: 25px;
   }
 
-  /* The checkmark/indicator (hidden when not checked) */
+  /* The checkmark/indicator (hidden when not checked). */
   .checkmark:after {
     left: 9px;
     top: 5px;
     width: 5px;
-    height: 10px;
+    height: 10px; /* Set the height for the element. */
   }
 
   #password {
