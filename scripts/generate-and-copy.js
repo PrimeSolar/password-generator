@@ -2,7 +2,15 @@
  * Script
  *
  * Generate a Password and Copy It to the Clipboard
- * 
+ *
+ * This script is designed to:
+ * Allow users to specify password criteria via the length input and checkboxes.
+ * Generate a random password based on those criteria.
+ * Copy the generated password to the clipboard for easy use.
+ * View an evaluated password strength.
+ *
+ * This functionality is useful for securely generating strong passwords in a user-friendly way.
+ *
  * Copyright © Vladislav Kazantsev
  * All rights reserved.
  * This code is the intellectual property of Vladislav Kazantsev.
@@ -45,11 +53,8 @@ const generatePassword = (
   allowedChars += includeNumbersChecked ? numberChars : "";
   allowedChars += includeSymbolsChecked ? symbolChars : "";
 
-  if (length <= 0) {
-    return "Password length must be at least 1";
-  }
-  if (allowedChars.length === 0) {
-    return "At least 1 character set needs to be selected";
+  if (allowedChars.length <= 0) {
+    return "";
   }
 
   for (let x = 0; x < length; x++) {
@@ -78,9 +83,44 @@ function copy() {
     includeNumbersChecked,
     includeSymbolsChecked
   );
+
+  // Evaluate and display password strength
+  const evaluatePasswordStrength = (password) => {
+    let strength = "Weak";
+    if (password.length >= 11) {
+      if (
+        /[A-Z]/.test(password) &&
+        /[0-9]/.test(password) &&
+        /[!@#$%^&*()_+?:{}]/.test(password)
+      ) {
+        strength = "Strong";
+      } else if (/[A-Z]/.test(password) || /[0-9]/.test(password)) {
+        strength = "Medium";
+      }
+    }
+    return strength;
+  };
+  const strength = evaluatePasswordStrength(password.innerHTML);
+  document.getElementById(
+    "password-strength"
+  ).innerText = `Password Strength: ${strength}`;
+  if (password.innerHTML.length <= 0) {
+    document.getElementById("password-strength").innerText =
+      "Password length must be at least 1";
+  }
+  if (
+    !includeLowerCaseChecked &&
+    !includeUpperCaseChecked &&
+    !includeNumbersChecked &&
+    !includeSymbolsChecked
+  ) {
+    document.getElementById("password-strength").innerText =
+      "At least 1 character set needs to be selected";
+  }
+
   let inp = document.createElement("input");
   document.body.appendChild(inp);
-  inp.value = password.innerHTML;
+  inp.value = password.innerText;
   inp.select();
   document.execCommand("copy", false);
   inp.remove();
