@@ -3,7 +3,7 @@
  * This file is the library containing my collection of custom, reusable web components
  * that can be used across different parts of the project. These components go beyond what browsers provide,
  * allowing for expanded capabilities and functionality in the project.
- * 
+ *
  * Copyright © Vladislav Kazantsev
  * All rights reserved.
  * This code is the intellectual property of Vladislav Kazantsev.
@@ -16,12 +16,16 @@
  * For inquiries about collaboration, usage outside exploratory purposes, or permissions, please contact: hypervisor7@pm.me
  */
 
-// Footer
+/** Footer. */
 const footerContainer = document.querySelector("#footerContainer");
 
+/**
+ * The script includes detailed comments
+ * to support stakeholders with varying JS knowledge.
+ */
 function footerContainerF(footerContainer) {
-  if (footerContainer != null) {
-    // Define footer content:
+  if (footerContainer) {
+    /** Define footer content. */
     footerContainer.innerHTML += `
 <footer>
 Copyright © <a href="https://primesolar.github.io/web-developer/">Vladislav Kazantsev</a> ${new Date().getFullYear()}
