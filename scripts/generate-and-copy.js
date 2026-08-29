@@ -26,6 +26,10 @@
 const generateAndCopyButton = document.getElementById(
   "generate-and-copy-button"
 );
+/**
+ * The script includes detailed comments
+ * to support stakeholders with varying JS knowledge.
+ */
 const password = document.getElementById("password");
 const length = document.getElementById("length");
 const includeLowerCase = document.getElementById("includeLowerCase");
@@ -84,7 +88,7 @@ function copy() {
     includeSymbolsChecked
   );
 
-  // Evaluate and display password strength
+  /** Evaluate and display password strength. */
   const evaluatePasswordStrength = (password) => {
     let strength = "Weak";
     if (password.length >= 11) {
