@@ -14,6 +14,10 @@
  */
 
 const button = document.getElementsByClassName("button");
+/**
+ * The script includes detailed comments
+ * to support stakeholders with varying JS knowledge.
+ */
 for (let btn of button) {
   btn.addEventListener("click", function (e) {
     let x = e.clientX - e.target.offsetLeft;
