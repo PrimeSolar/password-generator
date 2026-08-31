@@ -13,7 +13,7 @@
  * For inquiries about collaboration, usage outside exploratory purposes, or permissions, please contact: hypervisor7@pm.me
  */
 
- html {
+html {
   height: 100%; /* Set the height for the element. */
   scroll-behavior: smooth;
   background-image: url(../assets/background.jpg);
@@ -23,6 +23,8 @@
   background-size: 100vw 100vh;
 }
 
+/* The style sheet includes detailed property comments
+to support stakeholders with varying CSS knowledge. */
 body {
   padding: 0; /* Set the padding for the element. */
   margin: 0; /* Set the margin for the element. */
@@ -86,14 +88,15 @@ span {
 }
 
 input {
+  margin-left: 3.7px !important;
   border: solid 1px #2196f4;
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 8px 0 #00000037, 0 6px 20px 0 #00000030;
-  box-shadow: 0 4px 8px 0 #00000037, 0 6px 20px 0 #00000030;
-  margin-left: 3.7px !important;
+  box-shadow: 0 4px 10px 0 #00000037, 0 6px 25px 0 #00000030;
 }
 
 input:focus {
+  outline: solid 1px #2196f4;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -225,6 +228,11 @@ a.button:active {
 #length {
   width: 7vw; /* Set the width for the element. */
   text-align: center;
+}
+
+#password-strength {
+  position: relative;
+  bottom: 3px;
 }
 
 #password {
