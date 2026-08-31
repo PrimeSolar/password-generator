@@ -13,11 +13,13 @@
  * For inquiries about collaboration, usage outside exploratory purposes, or permissions, please contact: hypervisor7@pm.me
  */
 
- @media (max-width: 1920px) {
+@media (max-width: 1920px) {
   h1 {
     font-size: 30px;
   }
 
+  /* The style sheet includes detailed property comments
+  to support stakeholders with varying CSS knowledge. */
   /* A checkbox container. */
   .checkbox-container {
     padding-right: 25px;
@@ -78,8 +80,18 @@
     width: 90vw;
   }
 
+  #password-strength {
+    top: 7px;
+  }
+
   #footerContainer {
     width: 90vw;
     font-size: 16px;
+  }
+}
+
+@media (min-width: 1290px) {
+  #password-strength {
+    top: 8px;
   }
 }
