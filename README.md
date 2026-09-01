@@ -2,7 +2,7 @@
 
 &nbsp;&nbsp;Passwords are everywhere these days: email accounts, bank accounts, social media accounts&nbsp;&mdash; the list goes on! Having strong passwords across all of these platforms will keep your information safe from bad actors that want to use your private information for nefarious purposes like identity theft or financial fraud.
 
-&nbsp;&nbsp;Here’s the simple equation. Longer passwords are safer.
+&nbsp;&nbsp;Here's the simple equation. Longer passwords are safer.
 
 &nbsp;&nbsp;If the password is too short, it can be susceptible to a brute force attack, where a computer, or malicious computer program, goes through every combination of characters. The program may also go through the most common passwords, guessing in a handful of tries.
 
@@ -52,7 +52,7 @@ git clone https://github.com/PrimeSolar/password-generator.git
 
 **Click the image to support my work:**
 
-<a href="https://coff.ee/cocacola">
+<a href="https://coff.ee/cocacola" target="_blank" rel="noopener noreferrer">
   <img src="assets/coffee.jpg" width="370" height="auto" alt="Buy Me a Coffee"/>
 </a>
 
