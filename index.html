@@ -1,7 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html
+  lang="en"
+  dir="ltr"
+  itemscope
+  itemtype="https://schema.org/WebApplication"
+>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Vladislav Kazantsev" />
+    <meta name="copyright" content="© 2026 Vladislav Kazantsev" />
     <meta
       name="description"
       content="The Password Generator web application is a tool designed to create secure and random passwords for users. The generated passwords meet high security standards and can be customized to suit individual needs. With the Password Generator, you can easily create strong and unique passwords to enhance your online security."
@@ -10,12 +18,23 @@
       name="keywords"
       content="password, generator, web, application, security, protection, secure, tool"
     />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Password Generator",
+        "description": "The Password Generator web application is a tool designed to create secure and random passwords for users. The generated passwords meet high security standards and can be customized to suit individual needs. With the Password Generator, you can easily create strong and unique passwords to enhance your online security."
+      }
+    </script>
+
+    <title>Password Generator | Full Stack Developer Vladislav Kazantsev</title>
   </head>
 
   <body style="display: none">
     <noscript>For optimal performance, ensure JavaScript is active.</noscript>
     <div class="flex-container">
-      <h1>Password Generator</h1>
+      <h1 itemprop="headline">Password Generator</h1>
 
       <!-- <a
         class="link"
@@ -62,10 +81,13 @@
 
     <div id="footerContainer"></div>
 
-    <script src="scripts/generate-and-copy-min.js"></script>
-    <script src="scripts/ripples-min.js"></script>
-    <script src="scripts/components-min.js"></script>
-    <script src="scripts/meta-tags-min.js"></script>
-    <script src="scripts/headings.js"></script>
+    <script
+      type="text/javascript"
+      src="scripts/generate-and-copy-min.js"
+    ></script>
+    <script type="text/javascript" src="scripts/ripples-min.js"></script>
+    <script type="text/javascript" src="scripts/components-min.js"></script>
+    <script type="text/javascript" src="scripts/meta-tags-min.js"></script>
+    <script type="text/javascript" src="scripts/headings.js"></script>
   </body>
 </html>
