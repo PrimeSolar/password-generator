@@ -13,8 +13,13 @@
  * For inquiries about collaboration, usage outside exploratory purposes, or permissions, please contact: hypervisor7@pm.me
  */
 
+:root {
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", sans-serif;
+}
+
 html {
-  height: 100%; /* Set the height for the element. */
+  height: 100vh; /* Set the height for the element. */
   scroll-behavior: smooth;
   background-image: url(../assets/background.jpg);
   background-repeat: no-repeat;
@@ -29,7 +34,9 @@ body {
   padding: 0; /* Set the padding for the element. */
   margin: 0; /* Set the margin for the element. */
   text-align: center;
-  font-family: Arial; /* Set the font family for the text of the element. */
+  font-family: var(
+    --font-family
+  ); /* Set the font family for the text of the element. */
   font-size: 5vh; /* Set the font size for the text of the element. */
   align-items: center;
   width: 100vw; /* Set the width for the element. */
