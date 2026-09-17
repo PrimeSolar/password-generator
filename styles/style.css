@@ -15,7 +15,11 @@
 
 :root {
   --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", sans-serif;
+    "Helvetica Neue", sans-serif; /* Modern font stack prioritizes system fonts for faster rendering
+    and native typography experiences across platforms. */
+  --checkbox-font-size: 2.5vh;
+  --line-height: 1.15; /* Increased line-height improves readability. */
+  --checkbox-side: calc(var(--checkbox-font-size) * var(--line-height));
 }
 
 html {
@@ -26,18 +30,21 @@ html {
   background-position: center center;
   background-attachment: fixed;
   background-size: 100vw 100vh;
+  line-height: var(
+    --line-height
+  ); /* Set the vertical spacing between lines of text. */
 }
 
 /* The style sheet includes detailed property comments
 to support stakeholders with varying CSS knowledge. */
 body {
-  padding: 0; /* Set the padding for the element. */
   margin: 0; /* Set the margin for the element. */
+  padding: 0; /* Set the padding for the element. */
   text-align: center;
+  font-size: 5vh; /* Set the font size for the text of the element. */
   font-family: var(
     --font-family
   ); /* Set the font family for the text of the element. */
-  font-size: 5vh; /* Set the font size for the text of the element. */
   align-items: center;
   width: 100vw; /* Set the width for the element. */
   height: 100vh; /* Set the height for the element. */
@@ -112,10 +119,12 @@ input:focus {
 .checkbox-container {
   display: block;
   position: relative;
-  padding-right: 35px;
+  padding-right: calc(var(--checkbox-side) * 1.5);
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 2.5vh; /* Set the font size for the text of the element. */
+  font-size: var(
+    --checkbox-font-size
+  ); /* Set the font size for the text of the element. */
 }
 
 /* Hide the browser's default checkbox. */
@@ -132,8 +141,8 @@ input:focus {
   position: absolute;
   top: 0;
   right: 0;
-  height: 25px; /* Set the height for the element. */
-  width: 25px; /* Set the width for the element. */
+  width: var(--checkbox-side); /* Set the width for the element. */
+  height: var(--checkbox-side); /* Set the height for the element. */
   border-radius: 5px;
   background-color: #eeeeee;
   -webkit-box-shadow: 0 4px 8px 0 #00000037, 0 6px 20px 0 #00000030;
@@ -170,6 +179,24 @@ input:focus {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+/* The checkmark/indicator (hidden when not checked). */
+.checkmark:after {
+  left: calc(
+    (
+        (
+            var(--checkbox-side) - (1px * sqrt(pow(5, 2) / 2)) -
+              (1px * sqrt(pow(10, 2) / 2))
+          ) / 2
+      ) + 1px * sqrt(pow(3, 2) * 2) / 2
+  );
+  top: calc(
+    ((var(--checkbox-side) - (1px * sqrt(pow(10, 2) / 2))) / 2) - 1px *
+      sqrt(pow(3, 2) * 2)
+  );
+  width: 5px; /* Set the width for the element. */
+  height: 10px; /* Set the height for the element. */
 }
 
 /* Show the checkmark when checked. */
@@ -330,7 +357,8 @@ noscript p {
   margin: 1vh 0; /* Set the margin for the element. */
   text-align: left;
   font-size: 16px; /* Set the font size for the text of the element. */
-  line-height: 1.5em;
+  line-height: 1.6; /* Set the vertical spacing between lines of text.
+  Increased line-height improves readability. */
   color: #2f2f2f; /* Set the color for the text of the element. */
 }
 
@@ -348,5 +376,6 @@ noscript details summary {
 noscript li {
   margin: 2vh 0; /* Set the margin for the element. */
   font-size: 16px; /* Set the font size for the text of the element. */
-  line-height: 1.5em;
+  line-height: 1.6; /* Set the vertical spacing between lines of text.
+  Increased line-height improves readability. */
 }
