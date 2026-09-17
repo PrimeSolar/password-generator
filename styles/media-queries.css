@@ -17,32 +17,11 @@
   h1 {
     font-size: 30px;
   }
-
-  /* The style sheet includes detailed property comments
-  to support stakeholders with varying CSS knowledge. */
-  /* A checkbox container. */
-  .checkbox-container {
-    padding-right: 25px;
-    margin-bottom: 12px;
-    font-size: 2.5vh;
-  }
-
-  /* A custom checkbox. */
-  .checkmark {
-    height: 19px; /* Set the height for the element. */
-    width: 19px;
-  }
-
-  /* The checkmark/indicator (hidden when not checked). */
-  .checkmark:after {
-    left: 6px;
-    top: 2px;
-    width: 4px;
-    height: 10px; /* Set the height for the element. */
-  }
 }
 
 @media (max-width: 500px) {
+  /* The style sheet includes detailed property comments
+  to support stakeholders with varying CSS knowledge. */
   /* A checkbox container. */
   .flex-container {
     width: 90vw;
@@ -59,21 +38,6 @@
   .checkbox-container {
     padding-right: 35px;
     margin-bottom: 12px;
-    font-size: 2.5vh;
-  }
-
-  /* A custom checkbox. */
-  .checkmark {
-    height: 25px; /* Set the height for the element. */
-    width: 25px;
-  }
-
-  /* The checkmark/indicator (hidden when not checked). */
-  .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px; /* Set the height for the element. */
   }
 
   #password {
@@ -93,5 +57,36 @@
 @media (min-width: 1290px) {
   #password-strength {
     top: 8px;
+  }
+}
+
+@media (max-height: 700px) {
+  /* The checkmark/indicator (hidden when not checked). */
+  .checkmark:after {
+    left: calc(
+      (
+          (
+              var(--checkbox-side) - (1px * sqrt(pow(3, 2) / 2)) -
+                (1px * sqrt(pow(7, 2) / 2))
+            ) / 2
+        ) + 1px * sqrt(pow(2, 2) * 2) / 2
+    );
+    top: calc(
+      ((var(--checkbox-side) - (1px * sqrt(pow(7, 2) / 2))) / 2) - 1px *
+        sqrt(pow(2, 2) * 2)
+    );
+    width: 3px; /* Set the width for the element. */
+    height: 7px; /* Set the height for the element. */
+  }
+
+  .checkmark:after {
+    border-width: 0 2px 2px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Respect users' motion preferences. */
+  html {
+    scroll-behavior: auto;
   }
 }
